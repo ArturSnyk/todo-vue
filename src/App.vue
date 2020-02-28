@@ -5,7 +5,7 @@
      First todos is passed as a prop
      the second one is the data we pass
     -->
-    <Todos v-bind:todos="todos" />
+    <Todos v-bind:todos="todos" v-on:del-todo="deleteToDo" />
   </div>
 </template>
 
@@ -37,6 +37,11 @@ export default {
         }
       ]
     };
+  },
+  methods: {
+    deleteToDo(id) {
+      this.todos = this.todos.filter(todo => todo.id !== id);
+    }
   }
 };
 </script>

@@ -15,6 +15,12 @@ export default {
     todo: {
       type: String
     }
+  },
+  methods: {
+    markComplete() {
+      console.log("checked");
+      this.todo.completed = !this.todo.completed;
+    }
   }
 };
 </script>
