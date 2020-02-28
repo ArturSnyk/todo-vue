@@ -10,13 +10,11 @@
 </template>
 
 <script>
-import HelloWorld from "./components/HelloWorld";
 import Todos from "./components/Todos";
 
 export default {
   name: "App",
   components: {
-    HelloWorld,
     Todos
   },
   data() {
@@ -25,17 +23,17 @@ export default {
         {
           id: 1,
           title: "Todo one",
-          compleate: false
+          completed: false
         },
         {
           id: 2,
           title: "Todo two",
-          compleate: true
+          completed: true
         },
         {
           id: 3,
           title: "Todo three",
-          compleate: false
+          completed: false
         }
       ]
     };
