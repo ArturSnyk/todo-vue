@@ -26,10 +26,13 @@ npm run lint
 
 ## Project roadmap
 
-- [ ] create a todoItem component
-  - [ ] add a checkbox
-  - [ ] clicking the checkbox will cross the item value
+- [x] create a todoItem component
+  - [x] add a checkbox
+  - [x] clicking the checkbox will cross the item value
   - [ ] having the time for the latest change for the checkbox
-- [ ] create a todoList component
+- [x] create a todoList component
 - [ ] create a search task component
   - [ ] add a `show completed task` checkbox
+- [x] add floating header
+  - [ ] add routing to home and about
+- [x] add todo component
