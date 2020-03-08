@@ -13,15 +13,15 @@ export default {
   name: 'TodoItem',
   props: {
     todo: {
-      type: Object,
-    },
+      type: Object
+    }
   },
   methods: {
     markComplete() {
       console.log('checked');
       this.todo.completed = !this.todo.completed;
-    },
-  },
+    }
+  }
 };
 </script>
 
