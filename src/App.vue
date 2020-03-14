@@ -29,11 +29,28 @@ export default {
     };
   },
   methods: {
-    deleteToDo(id) {
-      this.todos = this.todos.filter(todo => todo.id !== id);
+    async deleteToDo(id) {
+      try {
+        await axios.delete(`https://jsonplaceholder.typicode.com/todos/${id}`);
+        this.todos = this.todos.filter(todo => todo.id !== id);
+      } catch (err) {
+        console.log('🔴', err);
+      }
     },
-    addTodo(newTodo) {
-      this.todos = [...this.todos, newTodo];
+    async addTodo(newTodo) {
+      const { title, completed } = newTodo;
+      try {
+        const res = await axios.post(
+          'https://jsonplaceholder.typicode.com/todos',
+          {
+            title,
+            completed
+          }
+        );
+        this.todos = [...this.todos, res.data];
+      } catch (err) {
+        console.log('🔴', err);
+      }
     }
   },
   async created() {
